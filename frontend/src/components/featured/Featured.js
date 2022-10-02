@@ -19,36 +19,20 @@ const Featured = () => {
           (<>
             <Container>
               <Row>
-                <Card style={{ width: '18rem' }}>
-                  <Card.Img variant="top" src="holder.js/100px180" />
-                  <Card.Body>
-                    <Card.Title>Berlin</Card.Title>
-                    <Card.Text>
-                    {data[0]} properties
-                    </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
-                  </Card.Body>
-                </Card>
-                <Card style={{ width: '18rem' }}>
-                  <Card.Img variant="top" src="holder.js/100px180" />
-                  <Card.Body>
-                    <Card.Title>Madrid</Card.Title>
-                    <Card.Text>
-                      {data[1]} properties
-                    </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
-                  </Card.Body>
-                </Card>
-                <Card style={{ width: '18rem' }}>
-                  <Card.Img variant="top" src="holder.js/100px180" />
-                  <Card.Body>
-                    <Card.Title>London</Card.Title>
-                    <Card.Text>
-                    {data[2]} properties
-                    </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
-                  </Card.Body>
-                </Card>
+                {data && data?.map((d, index) => {
+                  return (
+                    <Card style={{ width: '18rem' }} key={index}>
+                      <Card.Img variant="top" src="holder.js/100px180" />
+                      <Card.Body>
+                        <Card.Title>Berlin</Card.Title>
+                        <Card.Text>
+                          {data[0]} properties
+                        </Card.Text>
+                        {/* <Button variant="primary">Go somewhere</Button> */}
+                      </Card.Body>
+                    </Card>
+                  )
+                })}
               </Row>
             </Container>
           </>)

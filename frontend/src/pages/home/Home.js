@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../../components/navbar/Navbar';
+import MainNavbar from '../../components/navbar/MainNavbar';
 import Header from '../../components/header/Header'
 import Featured from '../../components/featured/Featured'
 import PropertyList from '../../components/propertyList/PropertyList'
@@ -10,7 +10,7 @@ import Footer from '../../components/footer/Footer'
 const Home = () => {
   return (
     <div>
-      <Navbar />
+      <MainNavbar />
       <Header />
       <div>
         <Featured />

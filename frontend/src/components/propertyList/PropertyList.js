@@ -5,7 +5,6 @@ import useFetch from '../../hooks/useFetch'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button'
 
 const PropertyList = () => {
   const mainUrl = ` ${process.env.REACT_APP_API_KEY}hotels/countByType`
@@ -21,22 +20,17 @@ const PropertyList = () => {
               <Row>
                 {data && data?.map((d, index) => {
                   return (
-
                     <Card style={{ width: '18rem' }} key={index}>
                       <Card.Img variant="top" src="holder.js/100px180" />
                       <Card.Body>
-                        <Card.Title>Berlin</Card.Title>
+                        <Card.Title>{data[index]?.type}</Card.Title>
                         <Card.Text>
-
-                          {data[index].count} {data[index].type}
+                          {data[index]?.count} {data[index]?.type}
                         </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
                       </Card.Body>
                     </Card>
-
                   )
                 })}
-
               </Row>
             </Container>
           </>)
